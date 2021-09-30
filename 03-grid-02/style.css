@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    background-color: rgb(233, 122, 196);
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 200px auto;
+}
+
+.child {
+    background-color: rgb(204, 50, 122);
+    border: rgb(124, 15, 75) 2px solid;
+}
+
+.child:first-child {
+    background-color: rgb(164, 177, 164);
+    /* hay que considerar las líneas externas para esto... o sea que ocuparía el espacio de 2 de sus hermanos */
+    grid-column: 1 / 3;
+}
+
+.child:nth-child(5) {
+    background-color: gold;
+    /* esto va a arrancar desde la segunda línea, y ocupar el espacio de dos hermanos nuevamente */
+    /* el primer numero es la posicion, el segundo cuantas posiciones ocupa */
+    grid-column: 2 / span 2;
+    /* este height va a afectar a todo su row */
+    height: 40px;
+}

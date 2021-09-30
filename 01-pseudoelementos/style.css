@@ -1,0 +1,32 @@
+p::first-letter {
+    font-size: 3em;
+}
+
+p::first-line {
+    color: blueviolet;
+}
+/* agrega algo ANTES del elemento */
+.footer::before {
+    content: '»';
+}
+
+ul li {
+    display: inline;
+}
+/* agrega algo DESPUÉS del elemento */
+li::after {
+    content: ' > ';
+}
+/* no afecta al último hijo, sino solo a los demás */
+li:last-child::after {
+    content: '';
+}
+
+ul li:hover {
+    background-color: cadetblue;
+}
+
+ul li:focus-visible {
+    background-color: rgb(52, 99, 100);
+    border: 2px rgb(11, 57, 131) solid;
+}

@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    background-color: darksalmon;
+    /* si la última es 60, las dos primeras se van a repartir el espacio restante, en este caso, 20% cada una */
+    grid-template-columns: auto auto 60%;
+    /* las que no tengan especificado el alto de row, van a ocupar lo mínimo que su contenido requiera */
+    grid-template-rows: 200px;
+    /* si le ponen el justify content, los auto van a ocupar el mínimo necesario */
+    justify-content: space-between;
+    /* para que el align content nos funcione, tenemos que tener un height definido*/
+    height: 60vh;
+    align-content: space-around;
+}
+
+.child {
+    background-color: darkorchid;
+    border: darkviolet 2px solid;
+}
